@@ -123,7 +123,10 @@ if __name__ == "__main__":
     for g in tqdm(graphs):
         lin_tokens = dfs_linearize(g)
         sentences.append(g.metadata["snt"])
-        line_amr.append(" ".join(lin_tokens[1:-1]))
+        #line_amr.append(" ".join(lin_tokens[1:-1]))
+        line_amr.append(" ".join(lin_tokens))
+
+    print(f"all {len(line_amr)} AMRs processed")
 
     with open(args.output_prefix + ".amr", "w", encoding="utf-8") as fout:
         fout.write("\n".join(line_amr) + "\n")
