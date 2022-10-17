@@ -1,7 +1,6 @@
-corpus=LDC2020
-corpus=LDC2015
+# Preprocessing scripts for ACL2022
 
-for corpus in LDC2015 LDC2017 LDC2020
+for corpus in LDC2017 LDC2020
 do
 	OutPath=outputs/${corpus}
 	if [ ! -d ${OutPath} ];then
